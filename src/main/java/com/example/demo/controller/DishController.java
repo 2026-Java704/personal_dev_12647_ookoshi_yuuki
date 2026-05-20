@@ -27,4 +27,9 @@ public class DishController {
 		return "dishesadd";
 	}
 
+	@GetMapping("/dishes/note")
+	public String note() {
+		return "dishesnote";
+	}
+
 }
