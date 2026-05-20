@@ -90,9 +90,7 @@ public class UserController {
 		} else if (user.size() > 0) {
 			errorList.add("登録済みのメールアドレスです");
 		}
-		if (password.length() == 0) {
-			errorList.add("パスワードは必須です");
-		}
+
 		model.addAttribute("name", name);
 		model.addAttribute("email", email);
 		model.addAttribute("password", password);
