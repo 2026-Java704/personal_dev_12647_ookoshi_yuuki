@@ -6,15 +6,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.repository.DishRepository;
+import com.example.demo.repository.ResultRepository;
 
 @Controller
 public class DishController {
 	private final HttpSession session;
 	private final DishRepository dishRepository;
+	private final ResultRepository resultRepository;
 
-	public DishController(HttpSession session, DishRepository dishRepository) {
+	public DishController(HttpSession session, DishRepository dishRepository, ResultRepository resultRepository) {
 		this.session = session;
 		this.dishRepository = dishRepository;
+		this.resultRepository = resultRepository;
 	}
 
 	@GetMapping("/result")

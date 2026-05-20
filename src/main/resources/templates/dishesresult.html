@@ -21,7 +21,20 @@
 			<th>メモ</th>
 			<th>点数</th>
 		</tr>
-		
+		<tr th:each="record:${resultList}">
+			<td th:text="${record.recordDate}"></td>
+			<td th:text="${record.stapleFood}"></td>
+			<td th:text="${record.sideDish}"></td>
+			<td th:text="${record.mainDish}"></td>
+			<td th:text="${record.milkDish}"></td>
+			<td th:text="${record.fruitCount}"></td>
+			<td th:text="${record.detailMemo}"></td>
+			<td th:text="${record.achievement}"></td>
+			<td>
+				<form th:action="@{dishes/{id}/edit(id=${recode.id})}" method="get">
+				<button>更新</button>
+				</form>
+			</td>
 		
 		<tr th:each="dish:${dishes}">
 			<td th:texxt="${dish.}"></td>
