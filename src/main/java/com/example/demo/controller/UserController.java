@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
 
-import net.bytebuddy.implementation.bytecode.ByteCodeAppender.Size;
-
 @Controller
 public class UserController {
 	private final HttpSession session;
@@ -26,14 +24,11 @@ public class UserController {
 		this.userRepository = userRepository;
 	}
 
-	// ログイン画面を表示
 	@GetMapping({ "/", "/login", "/logout" })
 	public String index() {
-		session.invalidate();
 		return "login";
 	}
 
-	// ログインを実行
 	@PostMapping("/login")
 	public String login(
 			@RequestParam String email,
@@ -62,28 +57,27 @@ public class UserController {
 
 	}
 
-	//*新規登録画面の表示
-	@GetMapping("user/add")
-	public String create() {
+	@GetMapping("/user/add")
+	public String add() {
 		return "user";
 	}
 
-	//*新規登録処理
 	@PostMapping("/user/add")
 	public String store(
-			@RequestParam(defaultValue = "") String email,
 			@RequestParam(defaultValue = "") String name,
+			@RequestParam(defaultValue = "") String email,
 			@RequestParam(defaultValue = "") String password,
 			@RequestParam(defaultValue = "") Integer age,
-			@RequestParam(defaultValue = "") Integer gender, Model model) {
-		
+			@RequestParam(defaultValue = "") Integer gender,
+			Model model) {
+
 		List<User> user = userRepository.findByEmail(email);
-		List<String>errorList = new ArrayList<>();
+		List<String> errorList = new ArrayList<>();
 		if (name.length() == 0) {
-			errorList.add( "名前は必須です");
+			errorList.add("名前は必須です");
 		}
 		if (email.length() == 0) {
-			errorList.add( "メールアドレスは必須です");
+			errorList.add("メールアドレスは必須です");
 		}
 		if (password.length() == 0) {
 			errorList.add("パスワードは必須です");
@@ -93,24 +87,23 @@ public class UserController {
 		}
 		if (gender == 0) {
 			errorList.add("性別は必須です");
-		}else if (user.size() > 0) {
+		} else if (user.size() > 0) {
 			errorList.add("登録済みのメールアドレスです");
 		}
-		if(password.length() ==0) {
+		if (password.length() == 0) {
 			errorList.add("パスワードは必須です");
-		
 		}
-			
-			
-		
-		model.addAttribute(email);
-		model.addAttribute(name);
-		model.addAttribute(password);
-		model.addAttribute(age);
-		model.addAttribute(gender);
-		
-		User users = new UserController() 
-		return "user";
-
+		model.addAttribute("name", name);
+		model.addAttribute("email", email);
+		model.addAttribute("password", password);
+		model.addAttribute("age", age);
+		model.addAttribute("gender", gender);
+		if (errorList.size() > 0) {
+			model.addAttribute("errorList", errorList);
+			return "user";
+		}
+		User users = new User(name, email, password, age, gender);
+		userRepository.save(users);
+		return "redirect:/login";
 	}
 }

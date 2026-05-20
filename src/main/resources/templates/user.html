@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>ユーザ新規作成画面</title>
+	<meta charset="UTF-8">
+	<title>新規登録</title>
 </head>
+
 <body>
-	<h1>新規登録</h1>
-	
-	<form action="/users/add" method="post">
-		<input type="text" name ="name" placeholder="メールアドレス"><br>
-		<input type="text" name ="password" placeholder="名前"><br>
-	    <input type="text" name ="age" placeholder="パスワード"><br>
-		<input type="text" name ="gender" placeholder="年齢"><br>
-		<select name = "gender">
+	<header>
+		<h1>新規登録</h1>
+	</header>
+	<main>
+		<ul th:if="${errorList}">
+			<li th:each="error:${errorList}" th:text="${error}"></li>
+		</ul>
+	</main>
+	<form action="/user/add" method="post">
+		<input type="text" name="name" th:value="${name}" placeholder="名前"><br>
+		<input type="text" name="email" th:value="${email}" placeholder="メールアドレス"><br>
+		<input type="password" name="password" th:value="${email}" placeholder="パスワード"><br>
+		<input type="number" name="age" th:value="${age}" placeholder="年齢"><br>
+		<select name="gender">
 			<option value="0">--選択してください--</option>
-			<option value="1">男性</option>
-			<option value="2">女性</option>
-		</select>
-	
+			<option value="1">男</option>
+			<option value="2">女</option>
+		</select><br>
 		<button>登録</button>
 	</form>
+
+
 </body>
+
 </html>
