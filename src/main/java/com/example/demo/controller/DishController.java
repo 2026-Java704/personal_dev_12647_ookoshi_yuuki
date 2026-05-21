@@ -101,7 +101,7 @@ public class DishController {
 			@PathVariable Integer id, Model model) {
 		Result result = resultRepository.findById(id).get();
 		model.addAttribute("result", result);
-		return "dishEdit";
+		return "dishesEdit";
 	}
 
 	@PostMapping("/dishes/{id}/edit")

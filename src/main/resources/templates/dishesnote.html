@@ -17,13 +17,12 @@
 	<input type="hidden" name="mainDish" th:value="${mainDish}">
 	<input type="hidden" name="milkDish" th:value="${milkDish}">
 	<input type="hidden" name="fruitCount" th:value="${fruitCount}">
-		
+	
+	<button type="sumbit">登録</button><br>		
 	</form>
 
 	<textarea name="detailMemo" placeholder="詳細"></textarea>
-
-	<form action="/dishes/result" method="post">
-		<button type="sumbit">登録</button><br>
+		
 		<a href="/dishes/add">戻る</a>
 	</form>
 	
