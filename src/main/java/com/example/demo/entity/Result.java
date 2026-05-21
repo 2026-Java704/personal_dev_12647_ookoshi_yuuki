@@ -33,6 +33,10 @@ public class Result {
 	private String detailMemo;
 	private Integer achievement;
 
+	public Result() {
+
+	}
+
 	public Result(LocalDate recordDate, Integer stapleFood, Integer sideDish, Integer mainDish, Integer milkDish,
 			Integer fruitCount, String detailMemo) {
 
@@ -87,7 +91,6 @@ public class Result {
 
 	public Result(Integer stapleFood, Integer sideDish, Integer mainDish, Integer milkDish, Integer fruitCount,
 			Integer achievement) {
-		super();
 		this.stapleFood = stapleFood;
 		this.sideDish = sideDish;
 		this.mainDish = mainDish;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+	<link rel="stylesheet" href="/css/style.css">
 <head>
 	<meta charset="UTF-8">
 	<title>登録内容一覧表示画面</title>
@@ -31,22 +31,15 @@
 			<td th:text="${record.detailMemo}"></td>
 			<td th:text="${record.achievement}"></td>
 			<td>
-				<form th:action="@{dishes/{id}/edit(id=${recode.id})}" method="get">
-				<button>更新</button>
+				<form th:action="@{dishes/{id}/edit(id=${record.id})}" method="get">
+				<button type="submit">更新</button>
 				</form>
 			</td>
-		
-		<tr th:each="dish:${dishes}">
-			<td th:texxt="${dish.}"></td>
-			<form action="/dishes/{id}/edit" method="post"></form>
-			</tr>
-			
 		</tr>
-		
 		</table>
 		
-		<form action="/dishes/add" method="post">
-			<button>新規作成</button>
+		<form action="/dishes/add" method="get">
+			<button>登録画面</button>
 		</form>
 		
 		<a href="/logout">ログアウト</a>
