@@ -1,13 +1,13 @@
 /* 全体 */
 body {
-	background-color: #EFF0F7; /* 背景色  */
+	background-color: rgb(255, 255, 255); /* 背景色  */
 	text-align: center; /* 中央寄せ */
     min-width: 900px; /* 最小幅 */
 }
 /* ヘッダー、ナビゲーションメニュー、フッター */
 header, nav, footer {
-	background-color: #45496a; /* 背景色 */
-	color: #ffffff; /* 文字色 */
+	background-color: rgb(128, 255, 128); /* 背景色 */
+	color: rgb(0, 0, 0); /* 文字色 */
 	padding-top: 5px; /* 内側余白(上) */
 	padding-bottom: 5px; /* 内側余白(下) */
 }
@@ -33,23 +33,23 @@ main {
 /* 表線 */
 table, th, td {
 	border-collapse: collapse;
-	border: 1px solid #7d8bae;
+	border: 2px solid rgb(0, 0, 0);
 }
 /* 表 */
 table {
-    margin: 5px auto;
+    margin: 30px auto;
     min-width: 800px;
 }
 /* 表見出しセル */
 table th {
-	background: #7d8bae;
+	background: rgb(128, 255, 128);
 	color: #ffffff;
 }
 /* 送信ボタン */
 button {
-	margin: 2px;
+	margin: 10px;
 	padding: 5px 20px;
-	background-color: #e5857b;
+	background-color: rgb(255, 0, 0);
 	color: #ffffff;
 	border: none;
 	width:150px;

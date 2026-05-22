@@ -135,53 +135,72 @@ public class DishController {
 		return "redirect:/dishes/result";
 	}
 
+	//削除処理
+	@PostMapping("/dishes/{id}/delete")
+	public String delete(@PathVariable Integer id) {
+		resultRepository.deleteById(id);
+		return "redirect:/dishes/result";
+	}
+
 	//点数評価
 	private int sumAchievement(Integer stapleFood, Integer sideDish, Integer mainDish, Integer milkDish,
 			Integer fruitCount) {
 		int achievement = 88;
 		if (stapleFood >= 5 && stapleFood <= 7) {
 			achievement += 0;
-		} else if (stapleFood == 0 || stapleFood == 1) {
-			achievement -= 24;
-		} else if (stapleFood == 8 || stapleFood == 4) {
+		} else if (stapleFood == 4) {
 			achievement -= 4;
-		} else if (stapleFood == 9 || stapleFood == 3) {
+		} else if (stapleFood == 3) {
 			achievement -= 8;
-		} else if (stapleFood == 10 || stapleFood == 3) {
-			achievement -= 16;
 		} else if (stapleFood == 2) {
-			achievement -= 20;
+			achievement -= 12;
+		} else if (stapleFood == 1) {
+			achievement -= 16;
+		} else {
+			achievement -= 28;
 		}
 
 		if (sideDish >= 5 && sideDish <= 6) {
 			achievement += 0;
-		} else if (sideDish == 7 || sideDish == 4) {
+		} else if (sideDish == 4) {
 			achievement -= 4;
-		} else if (sideDish == 8 || sideDish == 3) {
+		} else if (sideDish == 3) {
 			achievement -= 8;
-		} else if (sideDish == 9 || sideDish == 2) {
+		} else if (sideDish == 2) {
+			achievement -= 12;
+		} else if (sideDish == 1) {
 			achievement -= 16;
-		} else if (sideDish == 10 || sideDish == 1) {
-			achievement -= 20;
-		} else if (sideDish == 0) {
+		} else {
 			achievement -= 24;
 		}
 
 		if (mainDish >= 3 && mainDish <= 5) {
 			achievement += 0;
-		} else if (mainDish == 6 || mainDish == 2) {
-			achievement -= 4;
-		} else if (mainDish == 7 || mainDish == 1) {
+		} else if (mainDish == 7) {
 			achievement -= 8;
-		} else if (mainDish == 8 || mainDish == 0) {
-			achievement -= 16;
+		} else if (mainDish == 6) {
+			achievement -= 4;
+		} else if (mainDish == 2) {
+			achievement -= 4;
+		} else if (mainDish == 1) {
+			achievement -= 8;
 		} else {
 			achievement -= 20;
 		}
 
 		if (milkDish == 2) {
 			achievement += 0;
-		} else if (milkDish == 1 || milkDish == 3) {
+		} else if (milkDish == 7) {
+			achievement -= 20;
+		} else if (milkDish == 6) {
+			achievement -= 16;
+		} else if (milkDish == 5) {
+			achievement -= 12;
+		} else if (milkDish == 4) {
+			achievement -= 8;
+		} else if (milkDish == 3) {
+			achievement -= 4;
+		} else if (milkDish == 1) {
 			achievement -= 4;
 		} else {
 			achievement -= 8;
@@ -189,12 +208,21 @@ public class DishController {
 
 		if (fruitCount == 2) {
 			achievement += 0;
-		} else if (fruitCount == 1 || fruitCount == 3) {
+		} else if (fruitCount == 7) {
+			achievement -= 20;
+		} else if (fruitCount == 6) {
+			achievement -= 16;
+		} else if (fruitCount == 5) {
+			achievement -= 12;
+		} else if (fruitCount == 4) {
+			achievement -= 8;
+		} else if (fruitCount == 3) {
+			achievement -= 4;
+		} else if (fruitCount == 1) {
 			achievement -= 4;
 		} else {
 			achievement -= 8;
 		}
-
 		return achievement;
 
 	}

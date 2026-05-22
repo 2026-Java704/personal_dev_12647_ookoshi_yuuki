@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+	<link rel="stylesheet" href="/css/style.css">
 <head>
 	<meta charset="UTF-8">
 	<title>食事内容詳細登録画面</title>
@@ -11,9 +11,6 @@
 		<h1>食事内容詳細（メモ）</h1>
 	</header>
 
-	
-
-
 	<form action="/dishes/add" method="post">
 		<input type="hidden" name="stapleFood" th:value="${stapleFood}">
 		<input type="hidden" name="sideDish" th:value="${sideDish}">
@@ -21,7 +18,7 @@
 		<input type="hidden" name="milkDish" th:value="${milkDish}">
 		<input type="hidden" name="fruitCount" th:value="${fruitCount}">
 
-		<textarea name="detailMemo" placeholder="詳細"></textarea>
+		<textarea name="detailMemo" placeholder="詳細"  rows="10" cols="40"></textarea><br>
 		<button type="sumbit">登録</button><br>
 		<a href="/dishes/add">戻る</a>
 	</form>
