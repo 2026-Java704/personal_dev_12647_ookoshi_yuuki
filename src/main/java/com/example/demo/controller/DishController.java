@@ -135,7 +135,7 @@ public class DishController {
 		return "redirect:/dishes/result";
 	}
 
-	//削除処理
+	//	//削除処理
 	@PostMapping("/dishes/{id}/delete")
 	public String delete(@PathVariable Integer id) {
 		resultRepository.deleteById(id);

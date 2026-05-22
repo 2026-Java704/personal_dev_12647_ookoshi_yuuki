@@ -1,12 +1,12 @@
 /* 全体 */
 body {
-	background-color: rgb(255, 255, 255); /* 背景色  */
+	background-color: rgb(191, 255, 153);	 /* 背景色  */
 	text-align: center; /* 中央寄せ */
     min-width: 900px; /* 最小幅 */
 }
 /* ヘッダー、ナビゲーションメニュー、フッター */
 header, nav, footer {
-	background-color: rgb(128, 255, 128); /* 背景色 */
+	background-color: rgb(153, 255, 153); /* 背景色 */
 	color: rgb(0, 0, 0); /* 文字色 */
 	padding-top: 5px; /* 内側余白(上) */
 	padding-bottom: 5px; /* 内側余白(下) */
