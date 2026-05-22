@@ -64,3 +64,8 @@ img{
 	width:40%;
 	border: 2px solid rgb(0, 0, 0);
 }
+
+/*メモ改行 */
+.memo{
+	white-space: pre-wrap;
+}
