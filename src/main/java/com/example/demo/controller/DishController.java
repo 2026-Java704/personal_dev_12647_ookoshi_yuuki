@@ -51,7 +51,7 @@ public class DishController {
 			@RequestParam(defaultValue = "") Integer mainDish,
 			@RequestParam(defaultValue = "") Integer milkDish,
 			@RequestParam(defaultValue = "") Integer fruitCount,
-			@RequestParam(defaultValue = "") String detalMemo,
+			@RequestParam(defaultValue = "") String detailMemo,
 			Model model) {
 
 		Integer userId = (Integer) session.getAttribute("userId");
@@ -64,7 +64,7 @@ public class DishController {
 		result.setMainDish(mainDish);
 		result.setMilkDish(milkDish);
 		result.setFruitCount(fruitCount);
-		result.setDetailMemo(detalMemo);
+		result.setDetailMemo(detailMemo);
 
 		int achievement = sumAchievement(
 				stapleFood,

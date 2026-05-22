@@ -3,12 +3,12 @@
 	<link rel="stylesheet" href="/css/style.css">
 <head>
 	<meta charset="UTF-8">
-	<title>登録内容一覧表示画面</title>
+	<title>食事登録内容一覧表示画面</title>
 </head>
 
 <body>
 	<header>
-		<h1>登録内容一覧</h1>
+		<h1>食事登録内容一覧</h1>
 	</header>
 	<table border="1">
 		<tr>
@@ -33,7 +33,7 @@
 			</td>
 			<td>
 				<span th:text="${record.mainDish}"></span><br>
-				<span th:text="${record.mainDish >=3 && record.sideDish <=5 ? '〇':'✕'}"></span>	
+				<span th:text="${record.mainDish >=3 && record.mainDish <=5 ? '〇':'✕'}"></span>	
 			</td>
 			<td> 
 				<span th:text="${record.milkDish}"></span><br>
