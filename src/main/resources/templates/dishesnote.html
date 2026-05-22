@@ -10,21 +10,21 @@
 	<header>
 		<h1>食事内容詳細（メモ）</h1>
 	</header>
-	
-	<form action="/dishes/add" method="post">
-	<input type="hidden" name="stapleFood" th:value="${stapleFood}">	
-	<input type="hidden" name="sideDish" th:value="${sideDish}">
-	<input type="hidden" name="mainDish" th:value="${mainDish}">
-	<input type="hidden" name="milkDish" th:value="${milkDish}">
-	<input type="hidden" name="fruitCount" th:value="${fruitCount}">
-	
-	<button type="sumbit">登録</button><br>		
-	</form>
 
-	<textarea name="detailMemo" placeholder="詳細"></textarea>
-		
+	
+
+
+	<form action="/dishes/add" method="post">
+		<input type="hidden" name="stapleFood" th:value="${stapleFood}">
+		<input type="hidden" name="sideDish" th:value="${sideDish}">
+		<input type="hidden" name="mainDish" th:value="${mainDish}">
+		<input type="hidden" name="milkDish" th:value="${milkDish}">
+		<input type="hidden" name="fruitCount" th:value="${fruitCount}">
+
+		<textarea name="detailMemo" placeholder="詳細"></textarea>
+		<button type="sumbit">登録</button><br>
 		<a href="/dishes/add">戻る</a>
 	</form>
-	
 </body>
+
 </html>
