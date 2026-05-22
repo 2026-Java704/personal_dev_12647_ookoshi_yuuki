@@ -53,7 +53,7 @@ public class UserController {
 		model.addAttribute("email", email);
 		model.addAttribute("password", password);
 		session.setAttribute("userId", user.get(0).getUserId());
-		return "redirect:/dishes/add";
+		return "redirect:/dishes/result";
 
 	}
 

@@ -26,7 +26,7 @@ hr {
 }
 /* メイン */
 main {
-	background-color: #FFFFFF;
+	background-color: #E6FFE9;
 	min-height: 50px;
 	padding: 20px;
 }
@@ -58,4 +58,9 @@ button {
 /* 送信ボタン(マウスオーバー時) */
 button:hover {
 	background-color: #f1b2b2;
+}
+
+img{
+	width:40%;
+	border: 2px solid rgb(0, 0, 0);
 }
