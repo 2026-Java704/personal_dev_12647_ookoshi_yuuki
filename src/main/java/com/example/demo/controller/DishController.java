@@ -56,7 +56,6 @@ public class DishController {
 			Model model) {
 
 		Integer userId = (Integer) session.getAttribute("userId");
-
 		Result result = new Result();
 		result.setUserId(userId);
 		result.setRecordDate(LocalDate.now());

@@ -1,0 +1,51 @@
+body {
+  background-color:rgb(237, 255, 219)
+}
+
+main {
+  width: 500px;
+  padding: 40px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 12px;
+  border: 10px solid rgb(128, 255, 128);
+}
+
+
+form input[type = "text"]:focus,form input[type = "password"]:focus {
+  width: 250px;
+  background-color: #f0f8ff;
+}
+
+
+form input[type = "text"],form input[type = "password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 0px auto;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 5px 10px;
+  width: 200px;
+  outline: none;
+  border-radius: 10px;
+  transition: 0.25s;
+  text-align: center;
+}
+
+button {
+	margin: 10px;
+	padding: 5px 20px;
+	background-color: rgb(255, 0, 0);
+	color: #ffffff;
+	border: none;
+	width:150px;
+	cursor: pointer;
+}
+
+button:hover {
+background-color: rgb(255, 0, 0);
+}

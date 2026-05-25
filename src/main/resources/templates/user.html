@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/sinkiaccount.css">
 <head>
 	<meta charset="UTF-8">
 	<title>新規登録</title>
 </head>
 
 <body>
-	<header>
-		<h1>新規アカウント登録</h1>
-	</header>
+	
 	<main>
 		<ul th:if="${errorList}">
 			<li th:each="error:${errorList}" th:text="${error}"></li>
 		</ul>
-	</main>
+	
 	<form action="/user/add" method="post">
+		<header>
+				<h1>新規アカウント登録</h1>
+		</header>
 		<input type="text" name="name" th:value="${name}" placeholder="名前"><br>
 		<input type="text" name="email" th:value="${email}" placeholder="メールアドレス"><br>
 		<input type="password" name="password" th:value="${password}" placeholder="パスワード"><br>
@@ -27,7 +28,7 @@
 		</select><br>
 		<button>登録</button>
 	</form>
-
+	</main>
 
 </body>
 
