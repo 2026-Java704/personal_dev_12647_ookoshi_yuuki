@@ -149,11 +149,11 @@ public class DishController {
 		int achievement = 88;
 		if (stapleFood >= 5 && stapleFood <= 7) {
 			achievement += 0;
-		} else if (stapleFood == 4) {
+		} else if (stapleFood == 4 || stapleFood == 8) {
 			achievement -= 4;
-		} else if (stapleFood == 3) {
+		} else if (stapleFood == 3 || stapleFood == 9) {
 			achievement -= 8;
-		} else if (stapleFood == 2) {
+		} else if (stapleFood == 2 || stapleFood == 10) {
 			achievement -= 12;
 		} else if (stapleFood == 1) {
 			achievement -= 16;
@@ -163,13 +163,13 @@ public class DishController {
 
 		if (sideDish >= 5 && sideDish <= 6) {
 			achievement += 0;
-		} else if (sideDish == 4) {
+		} else if (sideDish == 4 || sideDish == 7) {
 			achievement -= 4;
-		} else if (sideDish == 3) {
+		} else if (sideDish == 3 || sideDish == 8) {
 			achievement -= 8;
-		} else if (sideDish == 2) {
+		} else if (sideDish == 2 || sideDish == 9) {
 			achievement -= 12;
-		} else if (sideDish == 1) {
+		} else if (sideDish == 1 || sideDish == 10) {
 			achievement -= 16;
 		} else {
 			achievement -= 24;
@@ -177,31 +177,21 @@ public class DishController {
 
 		if (mainDish >= 3 && mainDish <= 5) {
 			achievement += 0;
-		} else if (mainDish == 7) {
-			achievement -= 8;
-		} else if (mainDish == 6) {
+		} else if (mainDish == 4 || mainDish == 6) {
 			achievement -= 4;
-		} else if (mainDish == 2) {
-			achievement -= 4;
-		} else if (mainDish == 1) {
+		} else if (mainDish == 3 || mainDish == 7) {
 			achievement -= 8;
+		} else if (mainDish == 2 || mainDish == 8) {
+			achievement -= 12;
+		} else if (mainDish == 1 || mainDish == 9) {
+			achievement -= 16;
 		} else {
 			achievement -= 20;
 		}
 
 		if (milkDish == 2) {
 			achievement += 0;
-		} else if (milkDish == 7) {
-			achievement -= 20;
-		} else if (milkDish == 6) {
-			achievement -= 16;
-		} else if (milkDish == 5) {
-			achievement -= 12;
-		} else if (milkDish == 4) {
-			achievement -= 8;
-		} else if (milkDish == 3) {
-			achievement -= 4;
-		} else if (milkDish == 1) {
+		} else if (milkDish == 1 || milkDish == 3) {
 			achievement -= 4;
 		} else {
 			achievement -= 8;
@@ -209,17 +199,7 @@ public class DishController {
 
 		if (fruitCount == 2) {
 			achievement += 0;
-		} else if (fruitCount == 7) {
-			achievement -= 20;
-		} else if (fruitCount == 6) {
-			achievement -= 16;
-		} else if (fruitCount == 5) {
-			achievement -= 12;
-		} else if (fruitCount == 4) {
-			achievement -= 8;
-		} else if (fruitCount == 3) {
-			achievement -= 4;
-		} else if (fruitCount == 1) {
+		} else if (fruitCount == 1 || fruitCount == 3) {
 			achievement -= 4;
 		} else {
 			achievement -= 8;
