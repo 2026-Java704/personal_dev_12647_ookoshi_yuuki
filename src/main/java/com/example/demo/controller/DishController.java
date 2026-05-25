@@ -43,7 +43,7 @@ public class DishController {
 		return "dishesAdd";
 	}
 
-	//食事登録の処理
+	//新規食事登録の処理
 	@PostMapping("/dishes/add")
 	public String add(
 			@RequestParam(defaultValue = "") LocalDate recordDate,

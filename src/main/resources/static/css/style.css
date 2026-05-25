@@ -1,13 +1,13 @@
 /* 全体 */
 body {
-	background-color: rgb(191, 255, 153);	 /* 背景色  */
+	background-color: rgb(237, 255, 219);	 /* 背景色  */
 	text-align: center; /* 中央寄せ */
     min-width: 900px; /* 最小幅 */
 }
 /* ヘッダー、ナビゲーションメニュー、フッター */
 header, nav, footer {
-	background-color: rgb(153, 255, 153); /* 背景色 */
-	color: rgb(0, 0, 0); /* 文字色 */
+	background-color: rgb(173, 255, 123); /* 背景色 */
+	color: rgb(255, 255, 255); /* 文字色 */
 	padding-top: 5px; /* 内側余白(上) */
 	padding-bottom: 5px; /* 内側余白(下) */
 }
@@ -42,10 +42,10 @@ table {
 }
 /* 表見出しセル */
 table th {
-	background: rgb(128, 255, 128);
+	background: rgb(173, 255, 123);
 	color: #ffffff;
 }
-/* 送信ボタン */
+/* 更新ボタン */
 button {
 	margin: 10px;
 	padding: 5px 20px;
@@ -59,6 +59,7 @@ button {
 button:hover {
 	background-color: #f1b2b2;
 }
+
 
 img{
 	width:40%;

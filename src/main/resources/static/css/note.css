@@ -5,7 +5,7 @@ body {
     min-width: 900px; /* 最小幅 */
 }
 /* ヘッダー、ナビゲーションメニュー、フッター */
-header,  footer {
+header {
 	background-color: rgb(173, 255, 123); /* 背景色 */
 	color: rgb(255, 255, 255); /* 文字色 */
 	padding-top: 5px; /* 内側余白(上) */
@@ -27,7 +27,7 @@ hr {
 /* メイン */
 main {
 	background-color: #E6FFE9;
-	min-height: 100px;
+	min-height: 50px;
 	padding: 20px;
 }
 /* 表線 */
@@ -38,7 +38,7 @@ table, th, td {
 /* 表 */
 table {
     margin: 30px auto;
-    min-width: 950px;
+    min-width: 800px;
 }
 /* 表見出しセル */
 table th {
@@ -60,13 +60,8 @@ button:hover {
 	background-color: #f1b2b2;
 }
 
-img{
-	width:40%;
-	border: 2px solid rgb(0, 0, 0);
-}
 
 /*メモ改行 */
 .memo{
 	white-space: pre-wrap;
 }
-
