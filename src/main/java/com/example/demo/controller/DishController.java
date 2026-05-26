@@ -34,9 +34,7 @@ public class DishController {
 		Integer userId = (Integer) session.getAttribute("userId");
 		List<Result> resultList = resultRepository.findByUserId(userId);
 		resultRepository.findByRecordDate(recordDate);
-		if (recordDate == null) {
-			resultList = resultRepository.findAll();
-		} else {
+		if (recordDate != null) {
 			resultList = resultRepository.findByRecordDate(recordDate);
 		}
 		model.addAttribute("resultList", resultList);
