@@ -13,7 +13,7 @@ main {
   background-color: rgb(255, 255, 255);
   text-align: center;
   border-radius: 12px;
-  border: 10px solid rgb(128, 255, 128);
+  border: 5px solid rgb(128, 255, 128);
 }
 
 
@@ -38,15 +38,29 @@ form input[type = "text"],form input[type = "password"],input[type = "number"],i
 }
 
 button {
-	margin: 10px;
+	margin: 30px;
 	padding: 5px 20px;
 	background-color: rgb(255, 0, 0);
 	color: #ffffff;
 	border: none;
-	width:100px;
+	width:150px;
 	cursor: pointer;
 }
 
 button:hover {
-background-color: rgb(255, 0, 0);
+background-color: rgb(255, 128, 128);
+}
+
+form select[name="gender"] {
+	border: 0;
+	background: none;
+    display: block;
+	margin: 0px auto;
+	border: 2px solid rgb(0, 0, 0);
+	padding: 5px 10px;
+	width: 220px;
+	outline: none;
+	border-radius: 10px;
+	transition: 0.25s;
+	text-align: center;
 }

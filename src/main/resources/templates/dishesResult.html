@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/result.css">
 <head>
 	<meta charset="UTF-8">
 	<title>食事登録内容一覧表示画面</title>
@@ -10,6 +10,10 @@
 	<header>
 		<h1>食事登録内容一覧</h1>
 	</header>
+	<form action="/dishes/result" method="get">
+		<input type="date" name="recordDate">
+		<button>検索</button>
+	</form>
 	<table border="1">
 		<tr>
 			<th>日付</th>
@@ -49,19 +53,19 @@
 			<td th:text="${record.achievement}"></td>
 			<td>
 				<form th:action="@{/dishes/{id}/edit(id=${record.id})}" method="get">
-				<button type="submit">更新</button>
+				<button type="submit" class="edit-button">更新</button>
 				</form>
 			</td>
 			<td>
-				<form th:action="@{/dishes/{id}/delete(id=${record.id})}" method="post">
-				<button type="submit">削除</button>
+				<form th:action="@{/b2dishes/{id}/delete(id=${record.id})}" method="post">
+				<button type="submit" class="delete-button">削除</button>
 				</form>
 			</td>
 		</tr>
 		</table>
 		
 		<form action="/dishes/add" method="get">
-			<button>登録画面</button>
+			<button class="touroku-button">登録画面</button>
 		</form>
 		
 		<a href="/logout">ログアウト</a>
