@@ -1,12 +1,12 @@
 /* 全体 */
 body {
-	background-color: rgb(237, 255, 219);	 /* 背景色  */
+	background-color: rgb(255, 255, 255);	 /* 背景色  */
 	text-align: center; /* 中央寄せ */
     min-width: 900px; /* 最小幅 */
 }
 /* ヘッダー、ナビゲーションメニュー、フッター */
 header {
-	background-color: rgb(173, 255, 123); /* 背景色 */
+	background-color: #99CC66; /* 背景色 */
 	color: rgb(255, 255, 255); /* 文字色 */
 	padding-top: 5px; /* 内側余白(上) */
 	padding-bottom: 5px; /* 内側余白(下) */
@@ -23,7 +23,7 @@ hr {
 }
 /* メイン */
 main {
-	background-color: #E6FFE9;
+	background-color: rgb(255, 255, 255);
 	min-height: 50px;
 	padding: 20px;
 }
@@ -40,7 +40,7 @@ table {
 }
 /* 表見出しセル */
 table th {
-	background: rgb(173, 255, 123);
+	background: #99CC66;
 	color: #ffffff;
 }
 
@@ -58,7 +58,7 @@ button {
 }
 /* 更新ボタン(マウスオーバー時) */
 button:hover {
-	background-color: #f1b2b2;
+	background-color: rgb(128, 255, 255);
 }
 
 
