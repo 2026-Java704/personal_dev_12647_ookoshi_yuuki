@@ -10,10 +10,12 @@
 	<header>
 		<h1>食事登録内容一覧</h1>
 	</header>
+	
 	<form action="/dishes/result" method="get">
-		<input type="date" name="recordDate">
-		<button>検索</button>
+		<input type="date" name="recordDate" class="date">
+		<button class="kensaku-button">検索</button>
 	</form>
+	
 	<table border="1">
 		<tr>
 			<th>日付</th>
@@ -57,7 +59,7 @@
 				</form>
 			</td>
 			<td>
-				<form th:action="@{/b2dishes/{id}/delete(id=${record.id})}" method="post">
+				<form th:action="@{/dishes/{id}/delete(id=${record.id})}" method="post">
 				<button type="submit" class="delete-button">削除</button>
 				</form>
 			</td>
@@ -65,10 +67,12 @@
 		</table>
 		
 		<form action="/dishes/add" method="get">
-			<button class="touroku-button">登録画面</button>
+			<button class="touroku-button">登録</button>
 		</form>
 		
 		<a href="/logout">ログアウト</a>
+		
+		<h4>参照:食事バランスガイド（農林水産省）</h4>
 		
 </body>
 

@@ -1,73 +1,124 @@
 /* 全体 */
 body {
-	background-color: rgb(237, 255, 219);	 /* 背景色  */
-	text-align: center; /* 中央寄せ */
-    min-width: 900px; /* 最小幅 */
+	background-color: rgb(255, 255, 255);
+	/* 背景色  */
+	text-align: center;
+	/* 中央寄せ */
+	min-width: 900px;
+	/* 最小幅 */
 }
+
 /* ヘッダー、ナビゲーションメニュー、フッター */
-header,  footer {
-	background-color: rgb(173, 255, 123); /* 背景色 */
-	color: rgb(255, 255, 255); /* 文字色 */
-	padding-top: 5px; /* 内側余白(上) */
-	padding-bottom: 5px; /* 内側余白(下) */
+header,
+footer {
+	background-color:#99CC66;
+	/* 背景色 */
+	color: rgb(255, 255, 255);
+	/* 文字色 */
+	padding-top: 5px;
+	/* 内側余白(上) */
+	padding-bottom: 5px;
+	/* 内側余白(下) */
 }
+
 /* ヘッダー、ナビゲーション内リンク */
-header a{
+header a {
 	color: #ffffff;
 }
+
 /* ヘッダー内見出し */
 header h1 {
 	font-size: 20pt;
 	margin: 10px auto;
 }
+
 /* 仕切り線 */
 hr {
 	border-top: 2px dashed #7d8bae;
 }
+
 /* メイン */
 main {
-	background-color: #E6FFE9;
+	background-color: rgb(255, 255, 255);
 	min-height: 100px;
 	padding: 20px;
 }
+
 /* 表線 */
-table, th, td {
+table,
+th,
+td {
 	border-collapse: collapse;
 	border: 2px solid rgb(0, 0, 0);
 }
+
 /* 表 */
 table {
-	margin: 30px auto;  
-	max-width: 850px;	
-	min-width: 850px;	
-}
-/* 表見出しセル */
-table th {
-	background: rgb(173, 255, 123);
-	color: #ffffff;
-}
-/* 登録ボタン */
-button {
-	margin: 10px;
-	padding: 5px 20px;
-	background-color: rgb(255, 0, 0);
-	color: #ffffff;
-	border: none;
-	width:150px;
-	cursor: pointer;
-}
-/* 登録ボタン(マウスオーバー時) */
-button:hover {
-	background-color: #f1b2b2;
+	margin: 20px auto;
+	width: 70%
 }
 
-img{
-	width:40%;
+select[name="stapleFood"],
+select[name="sideDish"],
+select[name="mainDish"],
+select[name="milkDish"],
+select[name="fruitCount"] {
+	border: 0;
+	background: white;
+	display: block;
+	margin: 0px auto;
+	border: 2px solid rgb(0, 0, 0);
+	padding: 5px 10px;
+	width: 220px;
+	outline: none;
+	transition: 0.25s;
+	text-align: center;
+}
+
+/* 表見出しセル */
+table th {
+	background: #99CC66;
+	color: #ffffff;
+}
+
+/* 登録ボタン */
+
+.touroku-button {
+	margin: 0 auto;
+	padding: .6em 2em;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	background-color: rgb(128, 255, 0);
+	color: #fff;
+	font-weight: 600;
+}
+
+button {
+	margin: 10px;
+	padding: .6em 2em;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	background-color: rgb(0, 0, 255);
+	color: #fff;
+	font-weight: 600;
+}
+
+/* 登録ボタン(マウスオーバー時) */
+.touroku-button:hover {
+	background-color: rgb(128, 255, 0);
+}
+ .syousai-button:hover {
+	background-color: rgb(176, 255, 255);
+}
+
+img {
+	width: 40%;
 	border: 2px solid rgb(0, 0, 0);
 }
 
 /*メモ改行 */
-.memo{
+.memo {
 	white-space: pre-wrap;
 }
-

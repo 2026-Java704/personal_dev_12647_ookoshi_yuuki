@@ -1,97 +1,148 @@
 /* 全体 */
 body {
-	background-color: rgb(237, 255, 219);	 /* 背景色  */
-	text-align: center; /* 中央寄せ */
-    min-width: 900px; /* 最小幅 */
+	background-color: rgb(255, 255, 255);
+	/* 背景色  */
+	text-align: center;
+	/* 中央寄せ */
+	min-width: 900px;
+	/* 最小幅 */
 }
+
 /* ヘッダー、ナビゲーションメニュー、フッター */
-header,  footer {
-	background-color: rgb(173, 255, 123); /* 背景色 */
-	color: rgb(255, 255, 255); /* 文字色 */
-	padding-top: 5px; /* 内側余白(上) */
-	padding-bottom: 5px; /* 内側余白(下) */
+header,
+footer {
+	background-color: #99CC66;
+	/* 背景色 */
+	color: rgb(255, 255, 255);
+	/* 文字色 */
+	padding-top: 5px;
+	/* 内側余白(上) */
+	padding-bottom: 5px;
+	/* 内側余白(下) */
 }
+
 /* ヘッダー、ナビゲーション内リンク */
-header a{
+header a {
 	color: #ffffff;
 }
+
 /* ヘッダー内見出し */
 header h1 {
 	font-size: 20pt;
 	margin: 10px auto;
 }
+
 /* 仕切り線 */
 hr {
 	border-top: 2px dashed #7d8bae;
 }
+
 /* メイン */
 main {
 	background-color: #E6FFE9;
 	min-height: 50px;
 	padding: 20px;
 }
+
 /* 表線 */
-table, th, td {
+table,
+th,
+td {
 	border-collapse: collapse;
 	border: 2px solid rgb(0, 0, 0);
 }
+
 /* 表 */
 table {
-    margin: 30px auto;
-    min-width: 800px;
+	margin: 30px auto;
+	min-width: 800px;
 }
+
 /* 表見出しセル */
 table th {
-	background: rgb(173, 255, 123);
+	background-color: #99CC66;
 	color: #ffffff;
+}
+
+.kensaku-button {
+	width: 50;
+	margin: 0 auto;
+	padding: .5em 2em;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	background-color: rgb(192, 192, 192);
+	color: #fff;
+	font-weight: 600;
 }
 
 .edit-button {
+	width: 50;
+	margin: 0 auto;
+	padding: .9em 2em;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	background-color: rgb(0, 0, 255);
-	margin: 10px;
-	padding: 5px 20px;
-	color: #ffffff;
-	border: none;
-	width:150px;
-	cursor: pointer;
+	color: #fff;
+	font-weight: 600;
 }
-
 
 .delete-button {
+	width: 50;
+	margin: 0 auto;
+	padding: .9em 2em;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	background-color: rgb(255, 0, 0);
-	margin: 10px;
-	padding: 5px 20px;
-	color: #ffffff;
-	border: none;
-	width:150px;
-	cursor: pointer;
+	color: #fff;
+	font-weight: 600;
 }
 
- 
+
 .touroku-button {
-	margin: 10px;
-	padding: 5px 20px;
-	color: rgb(0, 0, 0);
-	border: none;
-	width:150px;
-	cursor: pointer;
-	background-color: rgb(249, 152, 6);
-	border: 2px solid rgb(0, 0, 0);
+	width: 50;
+	margin: 0 auto;
+	padding: .5em 2em;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	background-color: rgb(0, 255, 0);
+	color: #fff;
+	font-weight: 600;
 
 }
+
+
 
 /* (マウスオーバー時) */
-button:hover {
+.edit-button:hover {
+	background-color: rgb(0, 255, 255);
+}
+
+.delete-button:hover {
 	background-color: rgb(255, 128, 128);
 }
 
-
-img{
-	width:40%;
+img {
+	width: 40%;
 	border: 2px solid rgb(0, 0, 0);
 }
 
 /*メモ改行 */
-.memo{
+.memo {
 	white-space: pre-wrap;
+}
+
+h4 {
+	margin: 250px;
+	padding: 5px 20px;
+}
+
+.date {
+	width: 150px;
+	background-color: #f0f8ff;
+	margin: 20px;
+	padding: 5px 20px;
 }
