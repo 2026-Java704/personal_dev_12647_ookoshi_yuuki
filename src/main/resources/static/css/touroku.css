@@ -107,7 +107,7 @@ button {
 
 /* 登録ボタン(マウスオーバー時) */
 .touroku-button:hover {
-	background-color: rgb(128, 255, 0);
+	background-color: rgb(128, 255, 128);
 }
  .syousai-button:hover {
 	background-color: rgb(176, 255, 255);

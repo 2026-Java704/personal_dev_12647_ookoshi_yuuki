@@ -31,14 +31,29 @@ public class DishController {
 	//一覧画面表示（日付別検索）
 	@GetMapping("/dishes/result")
 	public String index(@RequestParam(defaultValue = "") LocalDate recordDate, Model model) {
-		Integer userId = (Integer) session.getAttribute("userId");
-		List<Result> resultList = resultRepository.findByUserId(userId);
-		resultRepository.findByRecordDate(recordDate);
-		if (recordDate != null) {
-			resultList = resultRepository.findByRecordDate(recordDate);
+		Integer sessionUserId = (Integer) session.getAttribute("userId");
+		if (sessionUserId == null) {
+			return "redirect:/login";
 		}
-		model.addAttribute("resultList", resultList);
+		List<Result> list;
+		if (recordDate != null) {
+			list = resultRepository.findByUserIdAndRecordDate(sessionUserId, recordDate);
+		} else {
+			list = resultRepository.findByUserId(sessionUserId);
+		}
+		model.addAttribute("recordDate", recordDate);
+		model.addAttribute("resultList", list);
 		return "dishesResult";
+		//		Integer userId = (Integer) session.getAttribute("userId");
+		//		List<Result> resultList = resultRepository.findByUserId(userId);
+		//		resultRepository.findByRecordDate(recordDate);
+		//		if (recordDate != null) {
+		//			//			resultList = resultRepository.findByRecordDate(recordDate);
+		//			resultList = resultRepository.findByUserIdAndRecordDate(userId, recordDate);
+		//
+		//		}
+		//		model.addAttribute("resultList", resultList);
+		//		return "dishesResult";
 	}
 
 	//食事登録画面表示

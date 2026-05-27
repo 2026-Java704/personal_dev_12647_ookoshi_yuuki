@@ -11,10 +11,12 @@
 		<h1>食事登録内容一覧</h1>
 	</header>
 	
-	<form action="/dishes/result" method="get">
+	<form th:action="@{/dishes/result}" method="get">
 		<input type="date" name="recordDate" class="date">
 		<button class="kensaku-button">検索</button>
 	</form>
+	
+	<h3 class="ten">食事バランススコア点数：88点満点</h3>
 	
 	<table border="1">
 		<tr>
@@ -66,13 +68,14 @@
 		</tr>
 		</table>
 		
+		
+		
 		<form action="/dishes/add" method="get">
 			<button class="touroku-button">登録</button>
 		</form>
 		
 		<a href="/logout">ログアウト</a>
 		
-		<h4>参照:食事バランスガイド（農林水産省）</h4>
 		
 </body>
 
